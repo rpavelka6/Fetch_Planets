@@ -1,0 +1,20 @@
+interface Shoe {
+    name: string;
+    heelHeight: number;
+    laces: boolean;
+    color: string;
+}
+
+class Sneakers implements Shoe {
+    name: string;
+    heelHeight: number;
+    laces: boolean;
+    color: string;
+
+    constructor() {
+        this.name = 'sneakers';
+        this.heelHeight = 0;
+        this.laces = true;
+    }
+
+}

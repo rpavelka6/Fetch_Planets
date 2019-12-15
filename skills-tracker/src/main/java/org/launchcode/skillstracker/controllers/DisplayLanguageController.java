@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 @ResponseBody
-//@RequestMapping("/")
 public class DisplayLanguageController {
 
     @GetMapping
@@ -39,32 +38,48 @@ public class DisplayLanguageController {
     public String languageForm() {
         return "<html>" +
                 "<body><h1><center>" +
-                "<form action='skill' method='post'>" +
+                "<form method = 'post' action = '/formSubmit'" +
                 "Name: <br>" +
-                "<input type='text' name='name'><br>" +
+                "<input type='text' name='name' /><br>" +
                 "My favorite language: <br>" +
                 "<select name='language'>" +
                     "<option value='javascript'>JavaScript</option>" +
                     "<option value='java'>Java</option>" +
                     "<option value='python'>Python</option>" +
                 "</select>" +
-                "<input type='submit' value='Select'><br>" +
+                "<br>" +
                 "My second favorite language:<br>" +
-                "<select name='2language'>" +
+                "<select name='language2'>" +
                     "<option value='javascript'>JavaScript</option>" +
                     "<option value='java'>Java</option>" +
                 "<option value='python'>Python</option>" +
                 "</select>" +
-                "<input type='submit' value='Select'><br>" +
+                "<br>" +
                 "My third favorite language:<br>" +
-                "<select name=3language'>" +
+                "<select name=language3'>" +
                 "<option value='javascript'>JavaScript</option>" +
                 "<option value='java'>Java</option>" +
                 "<option value='python'>Python</option>" +
                 "</select>" +
-                "<input type='submit' value='Select'><br>" +
+                "<br><input type='submit' value='Submit'>" +
                 "</form></h1></center>" +
                 "</body>" +
                 "</html>";
     }
+
+    @RequestMapping(value = "/formSubmit", method = {RequestMethod.GET, RequestMethod.POST})     //Handles both get and post requests
+    public String displayValues(@RequestParam (defaultValue = "World") String name,
+                                      @RequestParam (defaultValue = "JavaScript") String language,
+                                      @RequestParam (defaultValue = "Java") String language1,
+                                      @RequestParam (defaultValue = "Python") String language2) {
+        return "<html>" +
+                "<body>" +
+                "<h1>" + name + "</h1>" +
+                "<ol type = 1><li>" + language+ "</li>" +
+                "<li>" + language1 + "</li>" +
+                "<li>" + language2 + "</li>" +
+                "</body>" +
+                "</html>";
+    }
+
 }

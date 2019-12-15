@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+
+<html><head> +
+                <h1> +
+                Skills Tracker +
+                </h1> +
+                </head> +
+                <body> +
+                <h2> +
+                We have a few skills we would like you to learn.  Here is the list! +
+                </h2> +
+                <ol type='1'> +
+                <li>Java</li>\n +
+                  <li>JavaScript</li>\n +
+                  <li>Python</li>\n +
+                </ol> +
+                </html>
+</head>
+</html>

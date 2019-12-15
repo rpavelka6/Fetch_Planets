@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<style>
+	p {
+		margin-top: 100px;
+		margin-left: 400px;
+		margin-right: 400px;
+		text-align: center;
+		font: 55px arial, sans-serif;
+		color: LawnGreen;
+	}
+	h1 {
+        	border: 2px solid GreenYellow;
+		font-size: 65px;
+	        text-align: center;
+      	}
+      	h3 {
+        	text-align: center;
+		color: Lime;
+		font-size: 55px;
+      	}
+	#mainHeading {
+		color: Orchid;
+		font: 85px arial, sans-serif;
+	}
+	.center {
+		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+  		width: 50%;
+	}	
+	.greenParagraph {
+        	color: green;
+      	}
+      	#purpleParagraph {
+        	color: purple;
+      	}
+	</style>
+  </head>
+  <body>
+    <header>
+
+
+    <main>
+
+    </main>
+
+  <footer>
+
+</footer>
+  </body>
+</html>
+
